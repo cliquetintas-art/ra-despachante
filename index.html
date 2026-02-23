@@ -9,7 +9,6 @@
 
 <meta name="description" content="Despachante em Itaquaquecetuba especializado em transferência, licenciamento, multas e documentação veicular. Atendimento rápido via WhatsApp.">
 
-<!-- Open Graph -->
 <meta property="og:type" content="website">
 <meta property="og:title" content="Despachante em Itaquaquecetuba | R & A Despachante">
 <meta property="og:description" content="Transferência, licenciamento, multas e documentação veicular em Itaquaquecetuba. Atendimento rápido e seguro via WhatsApp.">
@@ -22,7 +21,6 @@
 <meta name="twitter:description" content="Agilidade e segurança em documentação veicular. Fale conosco no WhatsApp.">
 <meta name="twitter:image" content="https://cliquetintas-art.github.io/ra-despachante/img/carro-despachante1.jpg">
 
-<!-- Schema Empresa -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -40,72 +38,57 @@
 }
 </script>
 
-<!-- Schema FAQ -->
-<script type="application/ld+json">
-{
- "@context": "https://schema.org",
- "@type": "FAQPage",
- "mainEntity": [{
-   "@type": "Question",
-   "name": "Quanto custa uma transferência de veículo em Itaquaquecetuba?",
-   "acceptedAnswer": {
-     "@type": "Answer",
-     "text": "O valor da transferência varia conforme o tipo de veículo e taxas do Detran. Consulte a R & A Despachante para orçamento atualizado."
-   }
- },
- {
-   "@type": "Question",
-   "name": "Vocês fazem licenciamento anual?",
-   "acceptedAnswer": {
-     "@type": "Answer",
-     "text": "Sim. Realizamos licenciamento anual, regularização de débitos e emissão de documentos veiculares."
-   }
- }]
-}
-</script>
-
 <style>
- .avaliacoes{
-    background: linear-gradient(rgba(10,31,68,0.8), rgba(10,31,68,0.8)), 
-    url('img/estrela.jpg');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    padding: 80px 20px;
-    color: white;
-    text-align: center;
+
+/* RESET */
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
 }
+
 body {
-    margin: 0;
     font-family: Arial, sans-serif;
     background-color: #f4f6f8;
+    text-align:center;
 }
 
+/* CONTAINER CENTRALIZADOR */
+.container{
+    max-width:1100px;
+    margin:0 auto;
+    padding:0 20px;
+}
+
+/* HEADER */
 header {
     background: url('img/carro-despachante.jpg') center/cover no-repeat;
     color: white;
     padding: 100px 20px;
-    text-align: center;
     position: relative;
 }
 
 header::before {
     content: "";
     position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
+    inset: 0;
     background: rgba(10, 31, 68, 0.75);
 }
 
-header h1,
-header p,
-header a {
-    position: relative;
-    z-index: 1;
+header .container{
+    position:relative;
+    z-index:1;
 }
 
+header h1{
+    margin-bottom:15px;
+}
+
+header p{
+    margin-bottom:25px;
+}
+
+/* BOTÃO */
 .btn-whatsapp {
     background: #25D366;
     color: white;
@@ -134,13 +117,13 @@ header a {
     0% { left: -75%; }
     100% { left: 125%; }
 }
-}
 
+/* SECTIONS */
 section {
-    padding: 40px 20px;
-    text-align: center;
+    padding: 70px 20px;
 }
 
+/* SERVIÇOS */
 .servicos {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -155,17 +138,30 @@ section {
     box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
 
+/* DEPOIMENTOS */
 .depoimentos {
     background: #e0e1dd;
 }
 
+/* AVALIAÇÕES */
+.avaliacoes{
+    background: linear-gradient(rgba(10,31,68,0.8), rgba(10,31,68,0.8)), 
+    url('img/estrela.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 80px 20px;
+    color: white;
+}
+
+/* FOOTER */
 footer {
     background: #0a1f44;
     color: white;
     padding: 30px 20px;
-    text-align: center;
 }
 
+/* BOTÃO FLUTUANTE */
 .whatsapp-float {
     position: fixed;
     width: 60px;
@@ -181,7 +177,8 @@ footer {
     text-decoration: none;
     box-shadow: 0 4px 10px rgba(0,0,0,0.3);
 }
-  /* ===== AJUSTES PARA CELULAR ===== */
+
+/* RESPONSIVO */
 @media (max-width: 768px) {
 
     header {
@@ -202,7 +199,7 @@ footer {
     }
 
     section {
-        padding: 30px 15px;
+        padding: 40px 15px;
     }
 
     .servicos {
@@ -212,53 +209,57 @@ footer {
     .avaliacoes {
         padding: 60px 15px;
     }
-
 }
-</style>
 
+</style>
 </head>
+
 <body>
 
 <header>
+<div class="container">
     <h1>R & A Despachante e Consultoria</h1>
     <p>Especialista em documentação veicular. Agilidade, segurança e zero burocracia.</p>
     <a class="btn-whatsapp" href="https://wa.me/551146462154" target="_blank">
         FALAR NO WHATSAPP
     </a>
+</div>
 </header>
 
 <section>
+<div class="container">
     <h2>Serviços</h2>
     <div class="servicos">
         <div class="card">
             <h3>Transferência de Veículo</h3>
             <p>Regularize a transferência com rapidez e segurança.</p>
         </div>
-
         <div class="card">
             <h3>Licenciamento Anual</h3>
             <p>Deixe seu veículo em dia sem complicações.</p>
         </div>
-
         <div class="card">
             <h3>Regularização de Multas</h3>
             <p>Assessoria completa para resolver pendências.</p>
         </div>
-
         <div class="card">
             <h3>2ª Via de Documento</h3>
             <p>Emissão rápida e prática do seu CRLV.</p>
         </div>
     </div>
+</div>
 </section>
 
 <section class="depoimentos">
+<div class="container">
     <h2>O que nossos clientes dizem</h2>
     <p>"Atendimento rápido e eficiente. Recomendo!"</p>
     <p>"Resolveu minha documentação no mesmo dia."</p>
+</div>
 </section>
 
 <section class="avaliacoes">
+<div class="container">
     <h2>Avaliação dos Clientes</h2>
     <p style="font-size:28px; color:#f4b400;">
         ★ ★ ★ ★ ★
@@ -268,16 +269,19 @@ footer {
        style="display:inline-block; margin-top:15px; background:#0a1f44; color:white; padding:12px 25px; text-decoration:none; border-radius:6px; font-weight:bold;">
        Ver Avaliações
     </a>
+</div>
 </section>
 
 <footer>
+<div class="container">
     <p>Atendimento em Itaquaquecetuba - SP</p>
     <p>WhatsApp: (11) 46462154</p>
     <p>E-mail: radespachante.consultoria@gmail.com</p>
+</div>
 </footer>
 
 <a href="https://wa.me/551146462154" target="_blank" class="whatsapp-float">
-    💬
+💬
 </a>
 
 </body>
