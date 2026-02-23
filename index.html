@@ -16,44 +16,17 @@
 <meta property="og:image" content="https://cliquetintas-art.github.io/ra-despachante/img/carro-despachante1.jpg">
 <meta property="og:locale" content="pt_BR">
 
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Despachante em Itaquaquecetuba | R & A Despachante">
-<meta name="twitter:description" content="Agilidade e segurança em documentação veicular. Fale conosco no WhatsApp.">
-<meta name="twitter:image" content="https://cliquetintas-art.github.io/ra-despachante/img/carro-despachante1.jpg">
-
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "LocalBusiness",
-  "name": "R & A Despachante e Consultoria",
-  "url": "https://cliquetintas-art.github.io/ra-despachante/",
-  "telephone": "+55-11-46462154",
-  "address": {
-    "@type": "PostalAddress",
-    "addressLocality": "Itaquaquecetuba",
-    "addressRegion": "SP",
-    "addressCountry": "BR"
-  },
-  "description": "Despachante em Itaquaquecetuba especializado em transferência de veículos, licenciamento e documentação veicular."
-}
-</script>
-
 <style>
 
 /* RESET */
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-}
+*{margin:0;padding:0;box-sizing:border-box;}
 
 body {
     font-family: Arial, sans-serif;
-    background-color: #f4f6f8;
+    background-color:#f4f6f8;
     text-align:center;
 }
 
-/* CONTAINER CENTRALIZADOR */
 .container{
     max-width:1100px;
     margin:0 auto;
@@ -63,239 +36,170 @@ body {
 /* HEADER */
 header {
     background: url('img/carro-despachante.jpg') center/cover no-repeat;
-    color: white;
-    padding: 100px 20px;
-    position: relative;
-}
-
-header::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background: rgba(10, 31, 68, 0.75);
-}
-
-header .container{
+    color:white;
+    padding:100px 20px;
     position:relative;
-    z-index:1;
 }
-
-header h1{
-    margin-bottom:15px;
+header::before{
+    content:"";
+    position:absolute;
+    inset:0;
+    background:rgba(10,31,68,0.75);
 }
-
-header p{
-    margin-bottom:25px;
-}
+header .container{position:relative;z-index:1;}
+header h1{margin-bottom:15px;}
+header p{margin-bottom:25px;}
 
 /* BOTÃO */
-.btn-whatsapp {
-    background: #25D366;
-    color: white;
-    padding: 15px 25px;
-    text-decoration: none;
-    border-radius: 8px;
-    font-weight: bold;
-    display: inline-block;
-    position: relative;
-    overflow: hidden;
+.btn-whatsapp{
+    background:#25D366;
+    color:white;
+    padding:15px 25px;
+    text-decoration:none;
+    border-radius:8px;
+    font-weight:bold;
+    display:inline-block;
+    position:relative;
+    overflow:hidden;
+    animation:pulse 2.5s infinite;
 }
-
-.btn-whatsapp::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: -75%;
-    width: 50%;
-    height: 100%;
-    background: rgba(255,255,255,0.4);
-    transform: skewX(-20deg);
-    animation: brilho 2.5s infinite;
+.btn-whatsapp::before{
+    content:"";
+    position:absolute;
+    top:0;
+    left:-75%;
+    width:50%;
+    height:100%;
+    background:rgba(255,255,255,0.4);
+    transform:skewX(-20deg);
+    animation:brilho 2.5s infinite;
 }
-
-@keyframes brilho {
-    0% { left: -75%; }
-    100% { left: 125%; }
+@keyframes brilho{
+    0%{left:-75%;}
+    100%{left:125%;}
+}
+@keyframes pulse{
+    0%{transform:scale(1);}
+    50%{transform:scale(1.04);}
+    100%{transform:scale(1);}
 }
 
 /* SECTIONS */
-section {
-    padding: 70px 20px;
-}
+section{padding:70px 20px;}
 
 /* SERVIÇOS */
-.servicos {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
-    margin-top: 30px;
+.servicos{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:20px;
+    margin-top:30px;
 }
-
-.card {
-    background: white;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+.card{
+    background:white;
+    padding:25px;
+    border-radius:10px;
+    box-shadow:0 4px 10px rgba(0,0,0,0.1);
+    display:flex;
+    flex-direction:column;
+    justify-content:space-between;
+    cursor:pointer;
+    transition:0.3s;
+}
+.card:hover{
+    transform:translateY(-5px);
 }
 
 /* DEPOIMENTOS */
-.depoimentos {
-    background: #e0e1dd;
-}
+.depoimentos{background:#e0e1dd;}
 
 /* AVALIAÇÕES */
 .avaliacoes{
-    background: linear-gradient(rgba(10,31,68,0.8), rgba(10,31,68,0.8)), 
+    background:linear-gradient(rgba(10,31,68,0.8),rgba(10,31,68,0.8)),
     url('img/estrela.jpg');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    padding: 80px 20px;
-    color: white;
+    background-size:cover;
+    background-position:center;
+    color:white;
+}
+
+/* ESTRELAS */
+.estrelas{
+    font-size:28px;
+    color:#f4b400;
+}
+.estrelas span{
+    opacity:0;
+    display:inline-block;
+    transform:scale(0.5);
+    animation:aparecerEstrela 0.6s forwards;
+}
+.estrelas span:nth-child(1){animation-delay:0.2s;}
+.estrelas span:nth-child(2){animation-delay:0.5s;}
+.estrelas span:nth-child(3){animation-delay:0.8s;}
+.estrelas span:nth-child(4){animation-delay:1.1s;}
+.estrelas span:nth-child(5){animation-delay:1.4s;}
+@keyframes aparecerEstrela{
+    to{opacity:1;transform:scale(1);}
 }
 
 /* FOOTER */
-footer {
-    background: #0a1f44;
-    color: white;
-    padding: 30px 20px;
+footer{
+    background:#0a1f44;
+    color:white;
+    padding:30px 20px;
 }
 
-/* BOTÃO FLUTUANTE */
-.whatsapp-float {
-    position: fixed;
-    width: 60px;
-    height: 60px;
-    bottom: 20px;
-    right: 20px;
-    background-color: #25D366;
-    color: white;
-    border-radius: 50%;
-    text-align: center;
-    font-size: 30px;
-    line-height: 60px;
-    text-decoration: none;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+/* WHATS FLOAT */
+.whatsapp-float{
+    position:fixed;
+    width:60px;
+    height:60px;
+    bottom:20px;
+    right:20px;
+    background:#25D366;
+    color:white;
+    border-radius:50%;
+    text-align:center;
+    font-size:30px;
+    line-height:60px;
+    text-decoration:none;
+    box-shadow:0 4px 10px rgba(0,0,0,0.3);
+}
+
+/* MODAL */
+.modal{
+    display:none;
+    position:fixed;
+    inset:0;
+    background:rgba(0,0,0,0.6);
+    justify-content:center;
+    align-items:center;
+    z-index:999;
+}
+.modal-conteudo{
+    background:white;
+    padding:30px;
+    border-radius:12px;
+    max-width:500px;
+    width:90%;
+    text-align:center;
+    position:relative;
+}
+.fechar{
+    position:absolute;
+    top:15px;
+    right:20px;
+    font-size:24px;
+    cursor:pointer;
 }
 
 /* RESPONSIVO */
-@media (max-width: 768px) {
-
-    header {
-        padding: 60px 15px;
-    }
-
-    header h1 {
-        font-size: 22px;
-    }
-
-    header p {
-        font-size: 15px;
-    }
-
-    .btn-whatsapp {
-        padding: 12px 18px;
-        font-size: 14px;
-    }
-
-    section {
-        padding: 40px 15px;
-    }
-
-    .servicos {
-        grid-template-columns: 1fr;
-    }
-
-    .avaliacoes {
-        padding: 60px 15px;
-    }
-}
-/* ===== FADE IN ===== */
-.animar {
-    opacity: 0;
-    transform: translateY(30px);
-    transition: all 0.8s ease;
+@media(max-width:768px){
+    header{padding:60px 15px;}
+    header h1{font-size:22px;}
+    header p{font-size:15px;}
+    section{padding:40px 15px;}
 }
 
-.animar.ativo {
-    opacity: 1;
-    transform: translateY(0);
-}
-  /* ===== PULSE DISCRETO ===== */
-.btn-whatsapp {
-    animation: pulse 2.5s infinite;
-}
-
-@keyframes pulse {
-    0% { transform: scale(1); }
-    50% { transform: scale(1.04); }
-    100% { transform: scale(1); }
-}
-  /* ===== ESTRELAS UMA POR UMA ===== */
-
-.estrelas {
-    font-size: 28px;
-    color: #f4b400;
-}
-
-.estrelas span {
-    opacity: 0;
-    display: inline-block;
-    transform: scale(0.5);
-    animation: aparecerEstrela 0.6s forwards;
-}
-
-.estrelas span:nth-child(1) { animation-delay: 0.2s; }
-.estrelas span:nth-child(2) { animation-delay: 0.5s; }
-.estrelas span:nth-child(3) { animation-delay: 0.8s; }
-.estrelas span:nth-child(4) { animation-delay: 1.1s; }
-.estrelas span:nth-child(5) { animation-delay: 1.4s; }
-
-@keyframes aparecerEstrela {
-    to {
-        opacity: 1;
-        transform: scale(1);
-    }
-}
-  /* ===== MODAL ===== */
-
-.modal {
-    display: none;
-    position: fixed;
-    inset: 0;
-    background: rgba(0,0,0,0.6);
-    justify-content: center;
-    align-items: center;
-    z-index: 999;
-}
-
-.modal-conteudo {
-    background: white;
-    padding: 30px;
-    border-radius: 12px;
-    max-width: 500px;
-    width: 90%;
-    text-align: center;
-    position: relative;
-    animation: aparecerModal 0.3s ease;
-}
-
-.fechar {
-    position: absolute;
-    top: 15px;
-    right: 20px;
-    font-size: 24px;
-    cursor: pointer;
-}
-
-@keyframes aparecerModal {
-    from { transform: scale(0.8); opacity: 0; }
-    to { transform: scale(1); opacity: 1; }
-}
-
-.card {
-    cursor: pointer;
-}
 </style>
 </head>
 
@@ -303,138 +207,106 @@ footer {
 
 <header>
 <div class="container">
-    <h1>R & A Despachante e Consultoria</h1>
-    <p>Especialista em documentação veicular. Agilidade, segurança e zero burocracia.</p>
-    <a class="btn-whatsapp" href="https://wa.me/551146462154" target="_blank">
-        FALAR NO WHATSAPP
-    </a>
+<h1>R & A Despachante e Consultoria</h1>
+<p>Especialista em documentação veicular. Agilidade, segurança e zero burocracia.</p>
+<a class="btn-whatsapp" href="https://wa.me/551146462154" target="_blank">
+FALAR NO WHATSAPP
+</a>
 </div>
 </header>
 
 <section>
 <div class="container">
-    <h2>Serviços</h2>
-    <div class="servicos">
-        <<div class="card" onclick="abrirModal('transferencia')">
-    <h3>Transferência de Veículo</h3>
-    <p>Regularize a transferência com rapidez e segurança.</p>
+<h2>Serviços</h2>
+
+<div class="servicos">
+
+<div class="card" onclick="abrirModal('transferencia')">
+<h3>Transferência de Veículo</h3>
+<p>Regularize a transferência com rapidez e segurança.</p>
 </div>
 
 <div class="card" onclick="abrirModal('licenciamento')">
-    <h3>Licenciamento Anual</h3>
-    <p>Deixe seu veículo em dia sem complicações.</p>
+<h3>Licenciamento Anual</h3>
+<p>Deixe seu veículo em dia sem complicações.</p>
 </div>
 
 <div class="card" onclick="abrirModal('multas')">
-    <h3>Regularização de Multas</h3>
-    <p>Assessoria completa para resolver pendências.</p>
+<h3>Regularização de Multas</h3>
+<p>Assessoria completa para resolver pendências.</p>
 </div>
 
 <div class="card" onclick="abrirModal('segundaVia')">
-    <h3>2ª Via de Documento</h3>
-    <p>Emissão rápida e prática do seu CRLV.</p>
+<h3>2ª Via de Documento</h3>
+<p>Emissão rápida e prática do seu CRLV.</p>
 </div>
-    </div>
+
+</div>
 </div>
 </section>
 
-<section class="depoimentos animar">
+<section class="avaliacoes">
 <div class="container">
-    <h2>O que nossos clientes dizem</h2>
-    <p>"Atendimento rápido e eficiente. Recomendo!"</p>
-    <p>"Resolveu minha documentação no mesmo dia."</p>
-</div>
-</section>
-
-<section class="avaliacoes animar">
-<div class="container">
-    <h2>Avaliação dos Clientes</h2>
-    <p class="estrelas">
-    <span>★</span>
-    <span>★</span>
-    <span>★</span>
-    <span>★</span>
-    <span>★</span>
+<h2>Avaliação dos Clientes</h2>
+<p class="estrelas">
+<span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
 </p>
-    <p>5.0 de 5 estrelas no Google</p>
-    <a href="https://www.google.com/search?sca_esv=33649ae82cf5c68d&sxsrf=ANbL-n7OAvgpDp62TOyPTbUNV0zr58owCA:1771813708183&si=AL3DRZHrmvnFAVQPOO2Bzhf8AX9KZZ6raUI_dT7DG_z0kV2_x_-dnpEjlMvfa2ar3JxRf-UKmPAND_n92Rp7qElS7d77TtYGAMN1ITxvq6HVXQEP0hn1kXbYnBiWRf78joffULSy6HBZR3cSXMvF-gB7mfpHJ-VKPA%3D%3D&q=RA+Despachante+Coment%C3%A1rios&sa=X&ved=2ahUKEwjtxry1yO6SAxUnqJUCHWCgCb0Q0bkNegQIKBAF&biw=1366&bih=615&dpr=1"
-       style="display:inline-block; margin-top:15px; background:#0a1f44; color:white; padding:12px 25px; text-decoration:none; border-radius:6px; font-weight:bold;">
-       Ver Avaliações
-    </a>
+<p>5.0 de 5 estrelas no Google</p>
 </div>
 </section>
 
 <footer>
 <div class="container">
-    <p>Atendimento em Itaquaquecetuba - SP</p>
-    <p>WhatsApp: (11) 46462154</p>
-    <p>E-mail: radespachante.consultoria@gmail.com</p>
+<p>Atendimento em Itaquaquecetuba - SP</p>
+<p>WhatsApp: (11) 46462154</p>
+<p>E-mail: radespachante.consultoria@gmail.com</p>
 </div>
 </footer>
 
-<a href="https://wa.me/551146462154" target="_blank" class="whatsapp-float">
-💬
-</a>
-<script>
-const elementos = document.querySelectorAll('.animar');
+<a href="https://wa.me/551146462154" target="_blank" class="whatsapp-float">💬</a>
 
-function animarScroll() {
-    const topoPagina = window.pageYOffset + window.innerHeight;
-
-    elementos.forEach(el => {
-        if (topoPagina > el.offsetTop + 100) {
-            el.classList.add('ativo');
-        }
-    });
-}
-
-window.addEventListener('scroll', animarScroll);
-animarScroll();
-</script>
-  <!-- MODAL -->
+<!-- MODAL -->
 <div id="modal" class="modal">
-    <div class="modal-conteudo">
-        <span class="fechar" onclick="fecharModal()">&times;</span>
-        <h3 id="modal-titulo"></h3>
-        <p id="modal-texto"></p>
-        <br>
-        <a href="https://wa.me/5511954950044" target="_blank" class="btn-whatsapp">
-            Falar no WhatsApp
-        </a>
-    </div>
+<div class="modal-conteudo">
+<span class="fechar" onclick="fecharModal()">&times;</span>
+<h3 id="modal-titulo"></h3>
+<p id="modal-texto"></p>
+<br>
+<a href="https://wa.me/5511954950044" target="_blank" class="btn-whatsapp">
+Falar no WhatsApp
+</a>
+</div>
 </div>
 
 <script>
-function abrirModal(tipo) {
-    const titulo = document.getElementById("modal-titulo");
-    const texto = document.getElementById("modal-texto");
+function abrirModal(tipo){
+const titulo=document.getElementById("modal-titulo");
+const texto=document.getElementById("modal-texto");
 
-    if (tipo === "transferencia") {
-        titulo.innerText = "Transferência de Veículo";
-        texto.innerText = "Cuidamos de toda a documentação da transferência de propriedade do veículo com rapidez e segurança, evitando erros e atrasos.";
-    }
-
-    if (tipo === "licenciamento") {
-        titulo.innerText = "Licenciamento Anual";
-        texto.innerText = "Regularizamos o licenciamento do seu veículo de forma prática e rápida, garantindo que ele fique totalmente em dia.";
-    }
-
-    if (tipo === "multas") {
-        titulo.innerText = "Regularização de Multas";
-        texto.innerText = "Analisamos e orientamos na resolução de multas e pendências, buscando a melhor solução para seu caso.";
-    }
-
-    if (tipo === "segundaVia") {
-        titulo.innerText = "2ª Via de Documento";
-        texto.innerText = "Solicitamos a emissão da segunda via do CRLV de forma rápida e segura, evitando burocracia.";
-    }
-
-    document.getElementById("modal").style.display = "flex";
+if(tipo==="transferencia"){
+titulo.innerText="Transferência de Veículo";
+texto.innerText="Cuidamos de toda a documentação da transferência com rapidez e segurança.";
+}
+if(tipo==="licenciamento"){
+titulo.innerText="Licenciamento Anual";
+texto.innerText="Regularizamos o licenciamento do seu veículo de forma prática.";
+}
+if(tipo==="multas"){
+titulo.innerText="Regularização de Multas";
+texto.innerText="Analisamos e orientamos na resolução de multas e pendências.";
+}
+if(tipo==="segundaVia"){
+titulo.innerText="2ª Via de Documento";
+texto.innerText="Solicitamos a emissão da segunda via do CRLV de forma rápida e segura.";
 }
 
-function fecharModal() {
-    document.getElementById("modal").style.display = "none";
+document.getElementById("modal").style.display="flex";
+}
+
+function fecharModal(){
+document.getElementById("modal").style.display="none";
 }
 </script>
+
 </body>
 </html>
