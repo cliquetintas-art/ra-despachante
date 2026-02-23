@@ -210,7 +210,27 @@ footer {
         padding: 60px 15px;
     }
 }
+/* ===== FADE IN ===== */
+.animar {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.8s ease;
+}
 
+.animar.ativo {
+    opacity: 1;
+    transform: translateY(0);
+}
+  /* ===== PULSE DISCRETO ===== */
+.btn-whatsapp {
+    animation: pulse 2.5s infinite;
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.04); }
+    100% { transform: scale(1); }
+}
 </style>
 </head>
 
@@ -250,7 +270,7 @@ footer {
 </div>
 </section>
 
-<section class="depoimentos">
+<section class="depoimentos animar">
 <div class="container">
     <h2>O que nossos clientes dizem</h2>
     <p>"Atendimento rápido e eficiente. Recomendo!"</p>
@@ -258,7 +278,7 @@ footer {
 </div>
 </section>
 
-<section class="avaliacoes">
+<section class="avaliacoes animar">
 <div class="container">
     <h2>Avaliação dos Clientes</h2>
     <p style="font-size:28px; color:#f4b400;">
@@ -283,6 +303,21 @@ footer {
 <a href="https://wa.me/551146462154" target="_blank" class="whatsapp-float">
 💬
 </a>
+<script>
+const elementos = document.querySelectorAll('.animar');
 
+function animarScroll() {
+    const topoPagina = window.pageYOffset + window.innerHeight;
+
+    elementos.forEach(el => {
+        if (topoPagina > el.offsetTop + 100) {
+            el.classList.add('ativo');
+        }
+    });
+}
+
+window.addEventListener('scroll', animarScroll);
+animarScroll();
+</script>
 </body>
 </html>
