@@ -217,16 +217,35 @@ footer{
 }
 /* BOTÃO GOOGLE AVALIAÇÃO */
 .btn-google{
-    background:#ffffff;
-    color:#0a1f44;
-    padding:14px 26px;
-    text-decoration:none;
-    border-radius:8px;
+    display:inline-flex;
+    align-items:center;
+    gap:10px;
+    background:linear-gradient(45deg,#4285F4,#34A853,#FBBC05,#EA4335);
+    background-size:300% 300%;
+    color:white;
+    padding:14px 28px;
+    border-radius:10px;
     font-weight:bold;
-    display:inline-block;
-    margin-top:20px;
-    transition:0.3s ease;
-    border:2px solid transparent;
+    text-decoration:none;
+    margin-top:25px;
+    transition:all 0.4s ease;
+    animation:gradientMove 6s ease infinite;
+    box-shadow:0 4px 12px rgba(0,0,0,0.3);
+}
+
+.btn-google:hover{
+    transform:scale(1.08);
+    box-shadow:0 6px 18px rgba(0,0,0,0.4);
+}
+
+.btn-google span{
+    font-size:18px;
+}
+
+@keyframes gradientMove{
+    0%{background-position:0% 50%;}
+    50%{background-position:100% 50%;}
+    100%{background-position:0% 50%;}
 }
 .btn-google:hover{
     background:#f4b400;
@@ -289,7 +308,8 @@ FALAR NO WHATSAPP
     <a href="https://www.google.com/search?sca_esv=ff5dab35acd38c25&sxsrf=ANbL-n4LSl-F-NURXw4DVE8g0_p1jwM-mQ:1772300019576&si=AL3DRZEsmMGCryMMFSHJ3StBhOdZ2-6yYkXd_doETEE1OR-qOf44aY-KncbBrgUPt-zoMiggppePPyPGJCChZfL2FFamZ-8ejmR_IMs-x4a3HGFmmYGDFf5lNj83m-vudPogy_mffq6iTX-7g9jZWfEhts1xg-JpwKUVsmlfmilcwc6LJwpGPZ_A_xIueLkQB9nlaSC8n2Hj&q=R+%26+A+Despachante+e+Consultoria+Ltda.,+Regiane+Nascimento+Coment%C3%A1rios&sa=X&ved=2ahUKEwidsuiI3PySAxUGJrkGHSzvLIAQ0bkNegQIQBAF&biw=1366&bih=615&dpr=1"
    target="_blank"
    class="btn-google">
-Avaliar no Google
+<span>⭐</span> Avaliar no Google
+</a>
 </a>
 
 </div>
